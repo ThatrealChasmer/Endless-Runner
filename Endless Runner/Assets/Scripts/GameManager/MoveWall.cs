@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveWall : MonoBehaviour {
 
-    private Vector3 startPosition;
+    public Vector3 startPosition;
     public Vector3 endPosition;
 
     public float speed;
@@ -31,11 +31,11 @@ public class MoveWall : MonoBehaviour {
 
         transform.position = Vector3.Lerp(startPosition, endPosition, fracJourney);
 
-        if (transform.position.y == endPosition.y)
+        if (transform.position.x == endPosition.x)
         {
-            if (Time.timeScale <= 7f)
+            if (Time.timeScale <= 5f)
             {
-                Time.timeScale = Time.timeScale + 0.02f;
+                Time.timeScale = Time.timeScale + 0.03f;
             }
             Debug.Log(Time.timeScale);
             Destroy(gameObject);

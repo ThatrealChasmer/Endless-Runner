@@ -48,10 +48,20 @@ public class PlayerMovement : MonoBehaviour {
             isGrounded = true;
             jumpTime = 0;
         }
+
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         rb.gravityScale = 1;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Collider>().gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

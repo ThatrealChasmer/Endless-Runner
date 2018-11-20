@@ -15,8 +15,10 @@ public class SpawnWall : MonoBehaviour {
 	void Update () {
         if (canSpawn == true)
         {
-            float r = Random.Range(1, 4);
-            GameObject wall = Instantiate(wallPrefab, new Vector3(11, r / 2, 0), Quaternion.identity, transform);
+            int r = Random.Range(1, 5);
+            float f = r;
+            Debug.Log(r);
+            GameObject wall = Instantiate(wallPrefab, new Vector3(11, f / 2 - 4.5f, 0), Quaternion.identity, transform);
             wall.transform.localScale = new Vector3(1, r, 1);
 
             canSpawn = false;
