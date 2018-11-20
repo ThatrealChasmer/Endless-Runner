@@ -33,12 +33,13 @@ public class MoveWall : MonoBehaviour {
 
         if (transform.position.x == endPosition.x)
         {
-            if (Time.timeScale <= 5f)
-            {
-                Time.timeScale = Time.timeScale + 0.03f;
-            }
             Debug.Log(Time.timeScale);
             Destroy(gameObject);
+        }
+
+        if (Time.timeScale <= 5f)
+        {
+            Time.timeScale = Time.timeScale + 0.0001f;
         }
 
     }

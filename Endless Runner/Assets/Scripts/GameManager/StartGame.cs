@@ -9,9 +9,4 @@ public class StartGame : MonoBehaviour {
 	void Start () {
         Instantiate(playerPrefab, new Vector3(-4, -4, 0), Quaternion.identity);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

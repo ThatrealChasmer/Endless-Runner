@@ -17,4 +17,5 @@ public class Scoring : MonoBehaviour {
             Destroy(this);
         }
 	}
+
 }
